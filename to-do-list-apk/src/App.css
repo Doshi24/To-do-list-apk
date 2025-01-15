@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+  background-color: #ffffff; /* Light background */
+  color: #333; /* Dark text for contrast */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align from the top */
+  min-height: 100vh; /* Ensure full height for centering */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto; /* 20px gap from top */
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #007bff; /* Blue highlight */
+  text-align: center;
+  margin-bottom: 20px; /* Gap below the heading */
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bold font family for heading */
+}
+
+/* Add Task Section */
+.addtask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px; /* 20px gap from input to list */
+  width: 100%;
+  max-width: 600px;
+}
+
+.addtask input {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold; /* Bold text for input */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+  width: 50vw; /* Wider input field */
+  border: 1px solid #ddd; /* Soft gray border */
+  border-radius: 5px;
+  background-color: #eaeaea; /* Light gray background */
+  color: #333; /* Dark text */
+  text-align: center;
+  margin-right: 10px;
+}
+
+.addtask button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addtask button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* To-Do List Section */
+.todolist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0; /* 5px gap between list items */
+  width: 100%; /* Centered width */
+  max-width: 600px;
+}
+
+.list-item {
+  list-style-type: none;
+  background-color: #eaeaea; /* Light gray background to match input */
+  padding: 15px;
+  margin: 5px 0; /* 5px gap between list items */
+  width: 50vw; /* Match the width of the input field */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold; /* Bold text for list items */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font family */
+  text-align: center;
+}
+
+.list-item span {
+  cursor: pointer;
+  color: #ff4d4d; /* Maroon for delete icon */
+  font-size: 1.2rem;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.list-item span:hover {
+  color: #cc0000; /* Darker maroon on hover */
+}
+
+.list-item span.large {
+  font-size: 2rem; /* Larger icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  .addtask {
+      padding: 15px;
+  }
+
+  .addtask input {
+      width: 70%;
+      font-size: 1rem;
+  }
+
+  .addtask button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+
+  .list-item {
+      width: 70%;
+      font-size: 0.9rem;
+  }
+
+  .list-item span {
+      font-size: 1rem;
+  }
+}
